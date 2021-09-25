@@ -34,7 +34,13 @@ class LVM {
         
         let userInfo = Observable.combineLatest(input.username, input.password) { (username: $0, password: $1) }
         
-        output.signInResult = input.signUpTap.withLatestFrom(userInfo).flatMapLatest({ userInfo in
+        output.signInResult = input.signUpTap.withLatestFrom(userInfo).flatMapLatest({ userInfo -> Observable<NetStatus> in
+            if (userInfo.username.count < 3) {
+                return Observable<NetStatus>.create { observable in
+                    observable.onNext(.success("长度不够了"))
+                    return Disposables.create()
+                }
+            }
             return LoginService.signIn(username: userInfo.username, pwd: userInfo.password)
         })
         
