@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
 //        mvvm()
 //        mvvmWithService()
         setupVM()
+        
     }
     
     deinit {
@@ -122,8 +123,8 @@ class LoginViewController: UIViewController {
     
     func setupVM() {
         lvm = LVM(input: LVM.Input(
-            username: userName.rx.value.orEmpty.asObservable(),
-            password: pwd.rx.value.orEmpty.asObservable(),
+            username: userName.rx.text.orEmpty.skip(1).asObservable(),
+            password: pwd.rx.text.orEmpty.asObservable(),
             signUpTap: login.rx.tap.asObservable())
         )
         

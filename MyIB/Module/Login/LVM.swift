@@ -29,6 +29,12 @@ class LVM {
     
     var output: Output
     
+    var name: String {
+        get {
+            return "123"
+        }
+    }
+    
     init(input: Input) {
         output = Output()
         
@@ -43,6 +49,11 @@ class LVM {
             }
             return LoginService.signIn(username: userInfo.username, pwd: userInfo.password)
         })
+        
+        input.username.skip(1).subscribe(onNext: {text in
+            print(text)
+        }).disposed(by: disposeBag)
+
         
 //        output.signInResult = input.signUpTap.flatMapLatest({ _ -> Observable<NetStatus> in
 //            print("执行了")
