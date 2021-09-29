@@ -10,8 +10,19 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+enum LoginActionType {
+    case back
+    case goHome
+}
+
 class LViewModel {
     let disposeBag = DisposeBag()
+    
+    struct Output {
+        let loginAction = PublishRelay<LoginActionType>()
+    }
+    
+    let output = Output()
     
     struct Input {
         //用户名输入流
@@ -22,19 +33,32 @@ class LViewModel {
         let loginObservable: Observable<Void>
     }
     
-    let subject = PublishSubject<String>()
-    
     init(input: Input) {
-        input.loginObservable.subscribe(onNext: { [weak self] _ in
-            print("点击了登陆按钮")
-            self?.requestService1()
+        let userInfo = Observable.combineLatest(input.usernameObservable, input.passwordObservable) { (username: $0, password: $1) }
+        
+//        input.loginObservable.subscribe(onNext: { [weak self] _ in
+//            print("点击了登陆按钮")
+//            self?.requestService1(userName: userInfo.user, password: "String")
+//        }).disposed(by: disposeBag)
+        
+        input.loginObservable.withLatestFrom(userInfo).subscribe(onNext: {
+            info in
+            self.requestService1(userName: info.username, password: info.password)
         }).disposed(by: disposeBag)
     }
 }
 
 extension LViewModel {
-    func requestService1() {
-        LoginService.service1().subscribe { [weak self] info in
+    func requestService1(userName: String, password: String) {
+        if userName.count < 3 {
+            print("用户名太短")
+            return
+        }
+        if password.count < 3 {
+            print("密码太短")
+            return
+        }
+        LoginService.service1(userName: userName, password: password).subscribe { [weak self] info in
             print("requestService1 next:\(info)")
             self?.requestService2()
         } onError: { error in
@@ -48,6 +72,7 @@ extension LViewModel {
     func requestService2() {
         LoginService.service2().subscribe { [weak self] info in
             print("requestService2 next:\(info)")
+            self?.output.loginAction.accept(.goHome)
             self?.requestService3()
         } onError: { error in
             print("requestService2 error:\(error)")
@@ -60,7 +85,7 @@ extension LViewModel {
     func requestService3() {
         LoginService.service3().subscribe { [weak self] info in
             print("requestService3 next:\(info)")
-            self?.subject.onNext("gotonextpage")
+            self?.output.loginAction.accept(.back)
         } onError: { error in
             print("requestService3 error:\(error)")
         } onCompleted: {

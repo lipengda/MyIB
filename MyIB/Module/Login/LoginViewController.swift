@@ -165,10 +165,15 @@ class LoginViewController: UIViewController {
             loginObservable: login.rx.tap.asObservable())
         )
         
-        lViewModel.subject.subscribe { [weak self] info in
-            print("last----> \(info)")
-            self?.navigationController?.popViewController(animated: true)
-        }.disposed(by: disposeBag)
+        lViewModel.output.loginAction.subscribe(onNext: { [weak self] info in
+            switch info {
+            case .back:
+                self?.navigationController?.popViewController(animated: true)
+                print("backbackback")
+            case .goHome:
+                print("gogogo")
+            }
+        }).disposed(by: disposeBag)
     }
     
 }

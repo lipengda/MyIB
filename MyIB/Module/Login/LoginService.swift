@@ -51,7 +51,8 @@ class LoginService {
     }
     
     
-    static func service1() -> Observable<Any> {
+    static func service1(userName: String, password: String) -> Observable<Any> {
+        print("登陆基本信息: \(userName) \(password)")
         return Observable<Any>.create { (anyObserver) -> Disposable in
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
                 anyObserver.onNext("service1")
