@@ -32,6 +32,7 @@
 		28B67B5026FEF33300751945 /* LVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67B4F26FEF33200751945 /* LVM.swift */; };
 		28B67B5226FF058500751945 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67B5126FF058500751945 /* MyError.swift */; };
 		28B67B542700A26C00751945 /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67B532700A26C00751945 /* MyConstant.swift */; };
+		28B67B562704A80A00751945 /* LViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B67B552704A80A00751945 /* LViewModel.swift */; };
 		4E485AA5A6BAA4E0550A7F68 /* Pods_MyIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10280CAA8173473AA1C2493 /* Pods_MyIB.framework */; };
 		C727BD7B87E5864543366EB2 /* Pods_MyIB_MyIBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D70CFD2E5B81F5801EB7878 /* Pods_MyIB_MyIBUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		28B67B4F26FEF33200751945 /* LVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVM.swift; sourceTree = "<group>"; };
 		28B67B5126FF058500751945 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		28B67B532700A26C00751945 /* MyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
+		28B67B552704A80A00751945 /* LViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LViewModel.swift; sourceTree = "<group>"; };
 		6CF8F35876C9380B94905D69 /* Pods-MyIB-MyIBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIB-MyIBUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyIB-MyIBUITests/Pods-MyIB-MyIBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D70CFD2E5B81F5801EB7878 /* Pods_MyIB_MyIBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIB_MyIBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A77F38307D2067D9AA0AD8 /* Pods-MyIB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIB.debug.xcconfig"; path = "Target Support Files/Pods-MyIB/Pods-MyIB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				2800594826EA535C005D40AB /* LoginVM.swift */,
 				2800594B26ECFC54005D40AB /* LoginViewModel.swift */,
 				28B67B4F26FEF33200751945 /* LVM.swift */,
+				28B67B552704A80A00751945 /* LViewModel.swift */,
 				2800594D26ECFC5F005D40AB /* LoginService.swift */,
 				2876273826FE30990016DDB8 /* LoginEnum.swift */,
 				28B67B5126FF058500751945 /* MyError.swift */,
@@ -477,6 +480,7 @@
 				2800593A26E3B569005D40AB /* MyXibView.swift in Sources */,
 				2800593426E3AB6B005D40AB /* StoryBoardViewController.swift in Sources */,
 				28B67B542700A26C00751945 /* MyConstant.swift in Sources */,
+				28B67B562704A80A00751945 /* LViewModel.swift in Sources */,
 				28B67B5026FEF33300751945 /* LVM.swift in Sources */,
 				2800593D26E3BE07005D40AB /* HomeViewController3.swift in Sources */,
 				2800594126E8E49C005D40AB /* XibBaseView.swift in Sources */,

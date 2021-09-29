@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
     private var vm: LoginVM!
     private var viewModel: LoginViewModel!
     private var lvm: LVM!
+    private var lViewModel: LViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ class LoginViewController: UIViewController {
 //        mvc()
 //        mvvm()
 //        mvvmWithService()
-        setupVM()
+//        setupVM()
+        setupLViewModel()
         
     }
     
@@ -123,12 +125,12 @@ class LoginViewController: UIViewController {
     
     func setupVM() {
         lvm = LVM(input: LVM.Input(
-            username: userName.rx.text.orEmpty.skip(1).asObservable(),
+            username: userName.rx.text.orEmpty.asObservable(),
             password: pwd.rx.text.orEmpty.asObservable(),
             signUpTap: login.rx.tap.asObservable())
         )
         
-        lvm.output.signInResult.subscribe(onNext: { [weak self] (result) in
+        lvm.output.signInResult.subscribe(onNext: { result in
             switch result {
             case .start:
                 HUD.show(.progress)
@@ -154,6 +156,19 @@ class LoginViewController: UIViewController {
 //        }.disposed(by: disposeBag)
 
 
+    }
+    
+    func setupLViewModel() {
+        lViewModel = LViewModel(input: LViewModel.Input(
+            usernameObservable: userName.rx.text.orEmpty.asObservable(),
+            passwordObservable: pwd.rx.text.orEmpty.asObservable(),
+            loginObservable: login.rx.tap.asObservable())
+        )
+        
+        lViewModel.subject.subscribe { [weak self] info in
+            print("last----> \(info)")
+            self?.navigationController?.popViewController(animated: true)
+        }.disposed(by: disposeBag)
     }
     
 }
