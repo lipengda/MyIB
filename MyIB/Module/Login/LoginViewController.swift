@@ -165,7 +165,7 @@ class LoginViewController: UIViewController {
             loginObservable: login.rx.tap.asObservable())
         )
         
-        lViewModel.output.loginAction.subscribe(onNext: { [weak self] info in
+        lViewModel.output.loginAction.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] info in
             switch info {
             case .back:
                 self?.navigationController?.popViewController(animated: true)
@@ -174,6 +174,16 @@ class LoginViewController: UIViewController {
                 print("gogogo")
             case .showAlert(let text):
                 print("show \(text)")
+            }
+        }).disposed(by: disposeBag)
+        
+        
+        lViewModel.output.loginStatus.observe(on: MainScheduler.instance).subscribe(onNext: { status in
+            switch status {
+            case .show:
+                HUD.show(.progress)
+            case .hide:
+                HUD.hide()
             }
         }).disposed(by: disposeBag)
     }

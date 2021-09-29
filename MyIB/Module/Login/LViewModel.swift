@@ -16,11 +16,17 @@ enum LoginActionType {
     case showAlert(String)
 }
 
+enum LoginStatusType {
+    case show
+    case hide
+}
+
 class LViewModel {
     let disposeBag = DisposeBag()
     
     struct Output {
         let loginAction = PublishRelay<LoginActionType>()
+        let loginStatus = PublishRelay<LoginStatusType>()
     }
     
     let output = Output()
@@ -59,8 +65,12 @@ extension LViewModel {
             print("密码太短")
             return
         }
+        
+        self.output.loginStatus.accept(.show)
+        
         LoginService.service1(userName: userName, password: password).subscribe { [weak self] info in
             print("requestService1 next:\(info)")
+            self?.output.loginStatus.accept(.hide)
             self?.output.loginAction.accept(.showAlert("显示一个alert"))
             self?.requestService2()
         } onError: { error in
@@ -72,8 +82,10 @@ extension LViewModel {
     }
     
     func requestService2() {
+        self.output.loginStatus.accept(.show)
         LoginService.service2().subscribe { [weak self] info in
             print("requestService2 next:\(info)")
+            self?.output.loginStatus.accept(.hide)
             self?.output.loginAction.accept(.goHome)
             self?.requestService3()
         } onError: { error in
@@ -85,13 +97,13 @@ extension LViewModel {
     }
     
     func requestService3() {
+        self.output.loginStatus.accept(.show)
         LoginService.service3().subscribe { [weak self] info in
             print("requestService3 next:\(info)")
+            self?.output.loginStatus.accept(.hide)
             self?.output.loginAction.accept(.back)
         } onError: { error in
             print("requestService3 error:\(error)")
-        } onCompleted: {
-            print("requestService3 onCompleted")
         }.disposed(by: disposeBag)
 
     }
