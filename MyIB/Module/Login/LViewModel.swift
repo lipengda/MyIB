@@ -24,13 +24,6 @@ enum LoginStatusType {
 class LViewModel {
     let disposeBag = DisposeBag()
     
-    struct Output {
-        let loginAction = PublishRelay<LoginActionType>()
-        let loginStatus = PublishRelay<LoginStatusType>()
-    }
-    
-    let output = Output()
-    
     struct Input {
         //用户名输入流
         let usernameObservable: Observable<String>
@@ -39,6 +32,13 @@ class LViewModel {
         //登陆点击事件输入流
         let loginObservable: Observable<Void>
     }
+    
+    struct Output {
+        let loginAction = PublishRelay<LoginActionType>()
+        let loginStatus = PublishRelay<LoginStatusType>()
+    }
+    
+    let output = Output()
     
     init(input: Input) {
         let userInfo = Observable.combineLatest(input.usernameObservable, input.passwordObservable) { (username: $0, password: $1) }
