@@ -172,6 +172,8 @@ class LoginViewController: UIViewController {
                 print("backbackback")
             case .goHome:
                 print("gogogo")
+            case .showAlert(let text):
+                print("show \(text)")
             }
         }).disposed(by: disposeBag)
     }

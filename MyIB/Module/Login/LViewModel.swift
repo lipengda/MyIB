@@ -13,6 +13,7 @@ import RxCocoa
 enum LoginActionType {
     case back
     case goHome
+    case showAlert(String)
 }
 
 class LViewModel {
@@ -60,6 +61,7 @@ extension LViewModel {
         }
         LoginService.service1(userName: userName, password: password).subscribe { [weak self] info in
             print("requestService1 next:\(info)")
+            self?.output.loginAction.accept(.showAlert("显示一个alert"))
             self?.requestService2()
         } onError: { error in
             print("requestService1 error:\(error)")
