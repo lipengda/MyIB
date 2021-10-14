@@ -19,6 +19,6 @@ class MyVC: BaseVC {
     }
     
     override func tapped() {
-        print("23234234")
+        print("23234234\(self.userID)")
     }
 }

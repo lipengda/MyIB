@@ -25,7 +25,7 @@ class RootViewController: UIViewController {
         navigationController?.pushViewController(sb, animated: true)
     }
     @IBAction func extensionAction(_ sender: Any) {
-        let baseVC = MyVC()
+        let baseVC = MyVC(gender: "nil")
         navigationController?.pushViewController(baseVC, animated: true)
     }
 }
