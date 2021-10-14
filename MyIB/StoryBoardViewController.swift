@@ -13,15 +13,19 @@ import RxRelay
 import Alamofire
 
 class StoryBoardViewController: UIViewController {
+    @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myView = MyXibView.init(frame: CGRect(x: 10, y: 100, width: 100, height: 400))
-        view.addSubview(myView)
-        
+//        let myView = MyXibView.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//        view.addSubview(myView)
+        myLabel.isUserInteractionEnabled = true
         
         
     }
     
+    @IBAction func taplabel(_ sender: Any) {
+        print("add ok")
+    }
     
 }

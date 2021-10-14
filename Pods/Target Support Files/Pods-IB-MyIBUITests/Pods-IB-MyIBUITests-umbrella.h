@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MyIBVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MyIBVersionString[];
+FOUNDATION_EXPORT double Pods_IB_MyIBUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IB_MyIBUITestsVersionString[];
 

@@ -1,0 +1,6 @@
+framework module Pods_IB_MyIB {
+  umbrella header "Pods-IB-MyIB-umbrella.h"
+
+  export *
+  module * { export * }
+}

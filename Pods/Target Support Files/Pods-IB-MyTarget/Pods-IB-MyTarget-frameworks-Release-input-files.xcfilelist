@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-MyIB-MyIBUITests/Pods-MyIB-MyIBUITests-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-IB-MyTarget/Pods-IB-MyTarget-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework

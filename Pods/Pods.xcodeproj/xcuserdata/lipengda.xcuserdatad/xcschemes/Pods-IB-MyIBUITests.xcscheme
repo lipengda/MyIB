@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1300"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "230241B21C6E228C4A6D413FE0A579E6"
-               BuildableName = "Pods_MyIB.framework"
-               BlueprintName = "Pods-MyIB"
+               BlueprintIdentifier = "595307031AA3308E6C8D3407F7B2C14E"
+               BuildableName = "Pods_IB_MyIBUITests.framework"
+               BlueprintName = "Pods-IB-MyIBUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

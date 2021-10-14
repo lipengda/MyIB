@@ -24,4 +24,8 @@ class RootViewController: UIViewController {
         let sb = UIStoryboard.init(name: "LoginViewController", bundle: nil).instantiateViewController(identifier: "login")
         navigationController?.pushViewController(sb, animated: true)
     }
+    @IBAction func extensionAction(_ sender: Any) {
+        let baseVC = MyVC()
+        navigationController?.pushViewController(baseVC, animated: true)
+    }
 }
