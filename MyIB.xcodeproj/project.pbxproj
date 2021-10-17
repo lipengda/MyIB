@@ -28,6 +28,14 @@
 		2800594926EA535C005D40AB /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800594826EA535C005D40AB /* LoginVM.swift */; };
 		2800594C26ECFC55005D40AB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800594B26ECFC54005D40AB /* LoginViewModel.swift */; };
 		2800594E26ECFC5F005D40AB /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800594D26ECFC5F005D40AB /* LoginService.swift */; };
+		282DEADC271C58E200EAC9A4 /* MyTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */; };
+		282DEADD271C58E200EAC9A4 /* MyTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */; };
+		282DEADF271C58F200EAC9A4 /* MyTableviewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */; };
+		282DEAE0271C58F200EAC9A4 /* MyTableviewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */; };
+		282DEAE2271C5CE700EAC9A4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEAE1271C5CE700EAC9A4 /* MyCell.swift */; };
+		282DEAE3271C5CE700EAC9A4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEAE1271C5CE700EAC9A4 /* MyCell.swift */; };
+		282DEAE8271C5D3C00EAC9A4 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282DEAE7271C5D3C00EAC9A4 /* MyCell.xib */; };
+		282DEAE9271C5D3C00EAC9A4 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282DEAE7271C5D3C00EAC9A4 /* MyCell.xib */; };
 		2876273926FE30990016DDB8 /* LoginEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876273826FE30990016DDB8 /* LoginEnum.swift */; };
 		2893630F2712BF1F004F80A7 /* MyXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800593926E3B569005D40AB /* MyXibView.swift */; };
 		289363102712BF1F004F80A7 /* StoryBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2800593326E3AB6B005D40AB /* StoryBoardViewController.swift */; };
@@ -112,6 +120,10 @@
 		2800594826EA535C005D40AB /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		2800594B26ECFC54005D40AB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2800594D26ECFC5F005D40AB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableviewController.swift; sourceTree = "<group>"; };
+		282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTableviewController.storyboard; sourceTree = "<group>"; };
+		282DEAE1271C5CE700EAC9A4 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		282DEAE7271C5D3C00EAC9A4 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		2876273826FE30990016DDB8 /* LoginEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnum.swift; sourceTree = "<group>"; };
 		2893632D2712BF1F004F80A7 /* MyTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2893632E2712BF20004F80A7 /* MyIB copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MyIB copy-Info.plist"; path = "/Users/lipengda/dev/projects/iOS/MyIB/MyIB copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -262,6 +274,7 @@
 		2800594626EA531F005D40AB /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				282DEADA271C58C800EAC9A4 /* TableView */,
 				2893632F27187583004F80A7 /* Extension */,
 				2800594726EA5325005D40AB /* Login */,
 			);
@@ -283,6 +296,17 @@
 				28B67B532700A26C00751945 /* MyConstant.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		282DEADA271C58C800EAC9A4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */,
+				282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */,
+				282DEAE1271C5CE700EAC9A4 /* MyCell.swift */,
+				282DEAE7271C5D3C00EAC9A4 /* MyCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		2893632F27187583004F80A7 /* Extension */ = {
@@ -433,12 +457,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282DEADF271C58F200EAC9A4 /* MyTableviewController.storyboard in Resources */,
 				2800590426E10A4B005D40AB /* LaunchScreen.storyboard in Resources */,
 				2800590126E10A4B005D40AB /* Assets.xcassets in Resources */,
 				2800593826E3B143005D40AB /* MyXibView.xib in Resources */,
 				2800593626E3AD05005D40AB /* StoryBoardViewController.storyboard in Resources */,
 				2800593E26E3BE07005D40AB /* HomeViewController3.xib in Resources */,
 				2800594526EA4E28005D40AB /* LoginViewController.storyboard in Resources */,
+				282DEAE8271C5D3C00EAC9A4 /* MyCell.xib in Resources */,
 				280058FF26E10A49005D40AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,12 +487,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282DEAE0271C58F200EAC9A4 /* MyTableviewController.storyboard in Resources */,
 				289363222712BF1F004F80A7 /* LaunchScreen.storyboard in Resources */,
 				289363232712BF1F004F80A7 /* Assets.xcassets in Resources */,
 				289363242712BF1F004F80A7 /* MyXibView.xib in Resources */,
 				289363252712BF1F004F80A7 /* StoryBoardViewController.storyboard in Resources */,
 				289363262712BF1F004F80A7 /* HomeViewController3.xib in Resources */,
 				289363272712BF1F004F80A7 /* LoginViewController.storyboard in Resources */,
+				282DEAE9271C5D3C00EAC9A4 /* MyCell.xib in Resources */,
 				289363282712BF1F004F80A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2800593A26E3B569005D40AB /* MyXibView.swift in Sources */,
+				282DEAE2271C5CE700EAC9A4 /* MyCell.swift in Sources */,
 				2893633127187593004F80A7 /* BaseVC.swift in Sources */,
 				2800593426E3AB6B005D40AB /* StoryBoardViewController.swift in Sources */,
 				28B67B542700A26C00751945 /* MyConstant.swift in Sources */,
@@ -638,6 +667,7 @@
 				2800592826E10E18005D40AB /* RootNavigationController.swift in Sources */,
 				2800594C26ECFC55005D40AB /* LoginViewModel.swift in Sources */,
 				2800592A26E118C7005D40AB /* RootViewController.swift in Sources */,
+				282DEADC271C58E200EAC9A4 /* MyTableviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2893630F2712BF1F004F80A7 /* MyXibView.swift in Sources */,
+				282DEAE3271C5CE700EAC9A4 /* MyCell.swift in Sources */,
 				28936332271876E7004F80A7 /* BaseVC.swift in Sources */,
 				289363102712BF1F004F80A7 /* StoryBoardViewController.swift in Sources */,
 				289363112712BF1F004F80A7 /* MyConstant.swift in Sources */,
@@ -679,6 +710,7 @@
 				2893631C2712BF1F004F80A7 /* RootNavigationController.swift in Sources */,
 				2893631D2712BF1F004F80A7 /* LoginViewModel.swift in Sources */,
 				2893631E2712BF1F004F80A7 /* RootViewController.swift in Sources */,
+				282DEADD271C58E200EAC9A4 /* MyTableviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

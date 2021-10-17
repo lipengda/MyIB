@@ -66,6 +66,15 @@
                                     <action selector="extensionAction:" destination="PkO-k2-FbE" eventType="touchUpInside" id="vfn-hP-Uur"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whZ-Wa-hwM">
+                                <rect key="frame" x="48" y="383" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="tableview"/>
+                                <connections>
+                                    <action selector="tableviewAction:" destination="PkO-k2-FbE" eventType="touchUpInside" id="Zzl-7A-pBP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RLl-JN-cM6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

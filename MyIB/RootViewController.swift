@@ -28,4 +28,8 @@ class RootViewController: UIViewController {
         let baseVC = MyVC(gender: "nil")
         navigationController?.pushViewController(baseVC, animated: true)
     }
+    @IBAction func tableviewAction(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "MyTableviewController", bundle: nil).instantiateViewController(identifier: "MyTableviewController")
+        navigationController?.pushViewController(sb, animated: true)
+    }
 }
