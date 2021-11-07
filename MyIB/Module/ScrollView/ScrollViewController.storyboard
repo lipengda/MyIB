@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScrollViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ScrollViewController" customModule="MyIB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcH-ZX-p8P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UF-TT-Rux" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="540.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xa9-0F-MeC">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="oa5-O5-jCr"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一个可以变的label-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yi-TQ-Jir">
+                                                <rect key="frame" x="50" y="210" width="314" height="20.5"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-ZC-qHA">
+                                                <rect key="frame" x="0.0" y="240.5" width="414" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="f78-dp-5rQ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4yi-TQ-Jir" secondAttribute="trailing" constant="50" id="6Sx-kO-6Uo"/>
+                                            <constraint firstAttribute="trailing" secondItem="XFZ-ZC-qHA" secondAttribute="trailing" id="BAc-WX-Slu"/>
+                                            <constraint firstItem="4yi-TQ-Jir" firstAttribute="leading" secondItem="2UF-TT-Rux" secondAttribute="leading" constant="50" id="IlA-9L-KdR"/>
+                                            <constraint firstItem="xa9-0F-MeC" firstAttribute="top" secondItem="2UF-TT-Rux" secondAttribute="top" id="JoZ-LZ-Oac"/>
+                                            <constraint firstItem="XFZ-ZC-qHA" firstAttribute="top" secondItem="4yi-TQ-Jir" secondAttribute="bottom" constant="10" id="M2W-H6-2qV"/>
+                                            <constraint firstItem="xa9-0F-MeC" firstAttribute="leading" secondItem="2UF-TT-Rux" secondAttribute="leading" id="bZ1-vT-QNu"/>
+                                            <constraint firstItem="XFZ-ZC-qHA" firstAttribute="leading" secondItem="2UF-TT-Rux" secondAttribute="leading" id="hiM-Ty-YWE"/>
+                                            <constraint firstAttribute="trailing" secondItem="xa9-0F-MeC" secondAttribute="trailing" id="jdN-jq-MpA"/>
+                                            <constraint firstItem="4yi-TQ-Jir" firstAttribute="top" secondItem="xa9-0F-MeC" secondAttribute="bottom" constant="10" id="ueb-tg-GDb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2UF-TT-Rux" secondAttribute="trailing" id="0ee-ct-DLi"/>
+                                    <constraint firstAttribute="bottom" secondItem="2UF-TT-Rux" secondAttribute="bottom" id="2vy-53-BWR"/>
+                                    <constraint firstItem="2UF-TT-Rux" firstAttribute="leading" secondItem="mcH-ZX-p8P" secondAttribute="leading" id="DBu-Vu-ATS"/>
+                                    <constraint firstAttribute="bottom" secondItem="XFZ-ZC-qHA" secondAttribute="bottom" id="hN5-MU-Nkd"/>
+                                    <constraint firstItem="2UF-TT-Rux" firstAttribute="top" secondItem="mcH-ZX-p8P" secondAttribute="top" id="y2J-gR-Gqj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mcH-ZX-p8P" secondAttribute="bottom" id="XPD-b9-w4m"/>
+                            <constraint firstItem="mcH-ZX-p8P" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b00-dT-4SW"/>
+                            <constraint firstItem="mcH-ZX-p8P" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="qAl-AC-4YG"/>
+                            <constraint firstItem="2UF-TT-Rux" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="qn4-mO-OEY"/>
+                            <constraint firstItem="mcH-ZX-p8P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sDI-Sp-GaZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dynamicLabel" destination="4yi-TQ-Jir" id="HIn-zj-6KU"/>
+                        <outlet property="myScrollView" destination="mcH-ZX-p8P" id="Gki-pu-6hn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

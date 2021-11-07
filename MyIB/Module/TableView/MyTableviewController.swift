@@ -10,7 +10,7 @@ import UIKit
 
 class MyTableviewController: UIViewController {
     
-    let modules = ["UIStackView", "Calculator"]
+    let modules = ["UIStackView", "Calculator", "scroll", "priority", "snapkit"]
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -43,6 +43,17 @@ extension MyTableviewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             //CalculatorController
             let sb = UIStoryboard.init(name: "CalculatorController", bundle: nil).instantiateViewController(identifier: "CalculatorController")
+            navigationController?.pushViewController(sb, animated: true)
+        } else if indexPath.row == 2 {
+            //scroll
+            let sb = UIStoryboard.init(name: "ScrollViewController", bundle: nil).instantiateViewController(identifier: "ScrollViewController")
+            navigationController?.pushViewController(sb, animated: true)
+        } else if indexPath.row == 3 {
+            //scroll
+            let sb = UIStoryboard.init(name: "PriorityController", bundle: nil).instantiateViewController(identifier: "PriorityController")
+            navigationController?.pushViewController(sb, animated: true)
+        } else if indexPath.row == 4 {
+            let sb = SnapKitController()
             navigationController?.pushViewController(sb, animated: true)
         }
     }

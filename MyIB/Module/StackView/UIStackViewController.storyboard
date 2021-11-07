@@ -62,27 +62,54 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可以变大的label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtx-DI-hAN">
+                                <rect key="frame" x="100" y="384" width="214" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Lt-cS-1iS">
+                                <rect key="frame" x="0.0" y="414.5" width="414" height="29"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="afK-pf-gnR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
+                            <constraint firstItem="gtx-DI-hAN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="6bf-AZ-6qM"/>
                             <constraint firstItem="eVQ-bJ-S71" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="GtN-fl-afU"/>
+                            <constraint firstItem="2Lt-cS-1iS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NsE-Eu-XgR"/>
+                            <constraint firstItem="gtx-DI-hAN" firstAttribute="top" secondItem="eVQ-bJ-S71" secondAttribute="bottom" constant="10" id="T3v-8P-yG1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eVQ-bJ-S71" secondAttribute="trailing" constant="100" id="ZGa-iL-g1Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gtx-DI-hAN" secondAttribute="trailing" constant="100" id="kFe-2R-TXZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Lt-cS-1iS" secondAttribute="trailing" id="sw5-cV-hg1"/>
+                            <constraint firstItem="2Lt-cS-1iS" firstAttribute="top" secondItem="gtx-DI-hAN" secondAttribute="bottom" constant="10" id="yNG-9N-eFm"/>
                             <constraint firstItem="eVQ-bJ-S71" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="zUY-dN-RCM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button2" destination="Zby-mz-QAI" id="w1g-iB-Ix3"/>
+                        <outlet property="dynamicLabel" destination="gtx-DI-hAN" id="Sqb-Q4-h4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="81"/>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
