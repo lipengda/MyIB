@@ -36,6 +36,10 @@
 		28133DE9276DE69000BE185D /* RXController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28133DE7276DE69000BE185D /* RXController.storyboard */; };
 		28133DEA276DE69000BE185D /* RXController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28133DE7276DE69000BE185D /* RXController.storyboard */; };
 		28133DEB276DE69000BE185D /* RXController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28133DE7276DE69000BE185D /* RXController.storyboard */; };
+		281B4C772774A72C003B8D35 /* SwiftLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */; };
+		281B4C782774A72C003B8D35 /* SwiftLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */; };
+		281B4C792774A72C003B8D35 /* SwiftLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */; };
+		281B4C7A2774A72C003B8D35 /* SwiftLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */; };
 		282DEADC271C58E200EAC9A4 /* MyTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */; };
 		282DEADD271C58E200EAC9A4 /* MyTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */; };
 		282DEADF271C58F200EAC9A4 /* MyTableviewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */; };
@@ -150,6 +154,7 @@
 		2800594D26ECFC5F005D40AB /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		28133DE2276DE68100BE185D /* RXController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXController.swift; sourceTree = "<group>"; };
 		28133DE7276DE69000BE185D /* RXController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RXController.storyboard; sourceTree = "<group>"; };
+		281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLanguageController.swift; sourceTree = "<group>"; };
 		282DEADB271C58E200EAC9A4 /* MyTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableviewController.swift; sourceTree = "<group>"; };
 		282DEADE271C58F200EAC9A4 /* MyTableviewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTableviewController.storyboard; sourceTree = "<group>"; };
 		282DEAE1271C5CE700EAC9A4 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
@@ -314,6 +319,7 @@
 		2800594626EA531F005D40AB /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				281B4C752774A6DD003B8D35 /* SwiftLanguage */,
 				28133DE1276DE62500BE185D /* RX */,
 				2856EBA92737C24700B6FB8A /* SnapKit */,
 				2856EBA22736D62300B6FB8A /* Priority */,
@@ -352,6 +358,14 @@
 				28133DE7276DE69000BE185D /* RXController.storyboard */,
 			);
 			path = RX;
+			sourceTree = "<group>";
+		};
+		281B4C752774A6DD003B8D35 /* SwiftLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				281B4C762774A72C003B8D35 /* SwiftLanguageController.swift */,
+			);
+			path = SwiftLanguage;
 			sourceTree = "<group>";
 		};
 		282DEADA271C58C800EAC9A4 /* TableView */ = {
@@ -781,6 +795,7 @@
 				2800593D26E3BE07005D40AB /* HomeViewController3.swift in Sources */,
 				2800594126E8E49C005D40AB /* XibBaseView.swift in Sources */,
 				2876273926FE30990016DDB8 /* LoginEnum.swift in Sources */,
+				281B4C772774A72C003B8D35 /* SwiftLanguageController.swift in Sources */,
 				2800594326EA4E00005D40AB /* LoginViewController.swift in Sources */,
 				2856EB8B2735668100B6FB8A /* UIStackViewController.swift in Sources */,
 				28936334271878B4004F80A7 /* MyVC.swift in Sources */,
@@ -802,6 +817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281B4C782774A72C003B8D35 /* SwiftLanguageController.swift in Sources */,
 				2800590F26E10A4B005D40AB /* MyIBTests.swift in Sources */,
 				28133DE4276DE68100BE185D /* RXController.swift in Sources */,
 			);
@@ -811,6 +827,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281B4C792774A72C003B8D35 /* SwiftLanguageController.swift in Sources */,
 				2800591A26E10A4B005D40AB /* MyIBUITests.swift in Sources */,
 				28133DE5276DE68100BE185D /* RXController.swift in Sources */,
 			);
@@ -833,6 +850,7 @@
 				289363142712BF1F004F80A7 /* HomeViewController3.swift in Sources */,
 				289363152712BF1F004F80A7 /* XibBaseView.swift in Sources */,
 				289363162712BF1F004F80A7 /* LoginEnum.swift in Sources */,
+				281B4C7A2774A72C003B8D35 /* SwiftLanguageController.swift in Sources */,
 				289363172712BF1F004F80A7 /* LoginViewController.swift in Sources */,
 				2856EB8C2735668100B6FB8A /* UIStackViewController.swift in Sources */,
 				28936335271878F6004F80A7 /* MyVC.swift in Sources */,

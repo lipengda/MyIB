@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 class MyTableviewController: UIViewController {
+    @IBOutlet weak var myTableview: UITableView!
     
-    let modules = ["UIStackView", "Calculator", "scroll", "priority", "snapkit", "RX"]
+    let modules = ["UIStackView", "Calculator", "scroll", "priority", "snapkit", "RX", "SwiftLanguage"]
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -37,6 +38,11 @@ extension MyTableviewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let e = UIEdgeInsets(top: 0, left: 0, bottom: 400, right: 0)
+//        myTableview.contentInset = e
+        myTableview.setContentOffset(CGPoint(x: 0, y: 200), animated: true)
+        return
+        
         if indexPath.row == 0 {
             let sb = UIStoryboard.init(name: "UIStackViewController", bundle: nil).instantiateViewController(identifier: "UIStackViewController")
             navigationController?.pushViewController(sb, animated: true)
@@ -57,6 +63,9 @@ extension MyTableviewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(sb, animated: true)
         } else if indexPath.row == 5 {
             let sb = UIStoryboard.init(name: "RXController", bundle: nil).instantiateViewController(identifier: "RXController")
+            navigationController?.pushViewController(sb, animated: true)
+        } else if indexPath.row == 6 {
+            let sb = SwiftLanguageController()
             navigationController?.pushViewController(sb, animated: true)
         }
     }
