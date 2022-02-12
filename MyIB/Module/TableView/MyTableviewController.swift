@@ -11,7 +11,7 @@ import UIKit
 class MyTableviewController: UIViewController {
     @IBOutlet weak var myTableview: UITableView!
     
-    let modules = ["UIStackView", "Calculator", "scroll", "priority", "snapkit", "RX", "SwiftLanguage"]
+    let modules = ["UIStackView", "Calculator", "scroll", "priority", "snapkit", "RX", "SwiftLanguage", "BottomController"]
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -40,8 +40,8 @@ extension MyTableviewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let e = UIEdgeInsets(top: 0, left: 0, bottom: 400, right: 0)
 //        myTableview.contentInset = e
-        myTableview.setContentOffset(CGPoint(x: 0, y: 200), animated: true)
-        return
+//        myTableview.setContentOffset(CGPoint(x: 0, y: 200), animated: true)
+//        return
         
         if indexPath.row == 0 {
             let sb = UIStoryboard.init(name: "UIStackViewController", bundle: nil).instantiateViewController(identifier: "UIStackViewController")
@@ -66,6 +66,9 @@ extension MyTableviewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(sb, animated: true)
         } else if indexPath.row == 6 {
             let sb = SwiftLanguageController()
+            navigationController?.pushViewController(sb, animated: true)
+        } else if indexPath.row == 7 {
+            let sb = UIStoryboard.init(name: "BottomController", bundle: nil).instantiateViewController(identifier: "BottomController")
             navigationController?.pushViewController(sb, animated: true)
         }
     }
